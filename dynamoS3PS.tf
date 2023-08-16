@@ -16,7 +16,7 @@ resource "random_id" "s3_bucket_id" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "avi-saar-logs-aws${random_id.s3_bucket_id.hex}"
+  bucket = "logs-aws${random_id.s3_bucket_id.hex}"
 }
 
 resource "aws_s3_bucket_public_access_block" "s3bucket" {
@@ -32,7 +32,7 @@ resource "aws_ssm_parameter" "hello_parameter" {
   name        = "/myapp/hello_parameter"
   description = "Parameter to store the 'hello' value"
   type        = "String"
-  value       = "Hello, From Avi & Saar"
+  value       = "Hello, From My-App"
 }
 data "aws_iam_policy_document" "lambda_exec_role_policy" {
   statement {

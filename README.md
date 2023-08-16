@@ -13,10 +13,12 @@ current time
 5. The service will then write a message back to the user saying “hello, “ with the name of the user
 
 
+# Diagram Plan
+
 ![image](images/Architecture.JPG)
 
  
-Resources used for the above solution:
+# Resources used for the above solution:
 
 * AWS API Gateway
 * Amazon Cognito
@@ -27,9 +29,6 @@ Resources used for the above solution:
 * Parameter store
 * VPC, Subnets, Security Groups
 * IAM Roles and Policies
-
-
-# Diagram Plan
 
 
 # Workflow
@@ -65,7 +64,7 @@ sign-in page
 
 
 sign-up page
-![image](images/sign-in.JPG)
+![image](images/sign-up.JPG)
 
 
 confirm account with cognito validation code
@@ -76,5 +75,9 @@ getting inside the web app and getting parameter store value
 ![image](images/4.JPG)
 
 
+user info item created on DynamoDB
+![image](images/5.JPG)
+
+
 user data exported to the S3 bucket
-![image](images/5.jpeg)
+![image](images/7.JPG)
